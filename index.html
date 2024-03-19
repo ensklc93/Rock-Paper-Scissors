@@ -6,11 +6,35 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Rock-Paper-Scissors Game</h1>
-    <button id="rock" value="rock"> Rock </button>
-    <button id="paper" value="paper"> Paper </button>
-    <button id="scissors"value="scissors">Scissors</button>
-   
+    <h1>Rock-Paper-Scissors <br>Best of 5</h1>
+    <div id="result">The first to score 5 points wins!</div>
+    <div id="resultround"></div>
+
+    <div class="textScore">
+        <span id="textPlayerScore">Player Score: 0 </span> <span id="textComputerScore">Computer Score: 0</span>
+    </div>
+
+    <div class="textButtons">
+        <button id="rock" value="rock"> Rock </button>
+        <button id="paper" value="paper"> Paper </button>
+        <button id="scissors"value="scissors">Scissors</button>
+    </div>
+
+    <style>
+        .textScore,
+        .textButtons {
+            display: flex;
+            justify-content: space-around;
+        }
+        h1, div {
+            text-align: center;
+        }
+        .textScore,
+        div {
+            margin: 48px auto;
+        }
+    </style>
+
     <script src="java.js"></script>
 
 </body>
