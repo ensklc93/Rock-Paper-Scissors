@@ -8,3 +8,8 @@ The first version will be including basic JavaScript functions WITHOUT Loops. Be
 The first version plays the Rock Paper Scissors game of 5 rounds. The winner is declared at the end.
 
 The second version will come soon after including more advanced JavaScript knowledge. This repository will be updated!
+
+------------------------------
+This is the second version without UI. 
+
+The first version is in the "Rock-Paper-Scissors" repository!
