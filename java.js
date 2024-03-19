@@ -27,6 +27,7 @@ const textPlayerScore = document.querySelector("#textPlayerScore")
 const textComputerScore = document.querySelector("#textComputerScore")
 const resultround = document.querySelector('#resultround')
 
+
 const rock = document.querySelector("#rock")
 rock.addEventListener('click', () => {
     round++;
@@ -43,6 +44,13 @@ rock.addEventListener('click', () => {
         computerScore += 1;
         textComputerScore.textContent = `Computer Score: ${computerScore}`
         resultround.textContent = "You Lose! Paper beats Rock!";        
+    }
+    if (playerScore === 5) {
+        alert("You Won the Game!");
+        restartGame();
+    } else if (computerScore === 5) {
+        alert("You Lost the Game!");
+        restartGame();
     }
 });
 
@@ -63,6 +71,13 @@ paper.addEventListener('click', () => {
         textComputerScore.textContent = `Computer Score: ${computerScore}`
         resultround.textContent = "You Lose! Scissors beats Paper!"
     }
+    if (playerScore === 5) {
+        alert("You Won the Game!");
+        restartGame();
+    } else if (computerScore === 5) {
+        alert("You Lost the Game!");
+        restartGame();
+    }
 });
 
 const scissors = document.querySelector("#scissors")
@@ -82,4 +97,21 @@ scissors.addEventListener('click', () => {
         textComputerScore.textContent = `Computer Score: ${computerScore}`
         resultround.textContent = "You Lose! Rock beats Scissors!"; 
     }
+    if (playerScore === 5) {
+        alert("You Won the Game!");
+        restartGame();
+    } else if (computerScore === 5) {
+        alert("You Lost the Game!");
+        restartGame();
+    }
 });
+
+function restartGame () {
+    playerScore = 0;
+    computerScore = 0;
+    round = 0;
+    result.textContent = `Round: ${round}`;
+    textPlayerScore.textContent = `Player Score: ${playerScore}`;
+    textComputerScore.textContent = `Computer Score: ${computerScore}`;
+    resultround.textContent = "New Game!";
+}
